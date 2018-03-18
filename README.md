@@ -25,4 +25,15 @@ Usage
 
 This package is for use with ggplot2, a data graphics package that is part of Hadley Wickham's [tidyverse](https://www.tidyverse.org/). If you haven't used it before, check out chapter 3 on data visualization of his excellent online book [R for Data Science](http://r4ds.had.co.nz/data-visualisation.html).
 
+``` r
+library(tidyverse)
+library(ggiteam)
+
+mtcars %>%
+  ggplot(aes(wt, mpg, color = factor(cyl))) +
+  geom_point(size = 3) +
+  theme_iteam_presentations() +
+  scale_color_discrete_iteam()
+```
+
 ![](README_files/figure-markdown_github/unnamed-chunk-2-1.png)
