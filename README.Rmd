@@ -16,12 +16,12 @@ Based on data visualization principles put forth by [Edward Tufte](https://www.e
 
 ## Installation
 
-```{r}
+```{r message = F}
 # You'll first need to install devtools if you don't already have it
 # so that you can install a package from Github rather than CRAN.
 # install.packages("devtools")
-#library(devtools)
-#install_github("city-of-baltimore/ggiteam")
+# library(devtools)
+# install_github("city-of-baltimore/ggiteam")
 ```
 
 ## Usage
@@ -29,7 +29,7 @@ Based on data visualization principles put forth by [Edward Tufte](https://www.e
 This package is for use with ggplot2, a data graphics package that is part of Hadley Wickham's [tidyverse](https://www.tidyverse.org/).  If you haven't used it before, check out chapter 3 on data visualization of his excellent online book [R for Data Science](http://r4ds.had.co.nz/data-visualisation.html).
 
 
-```{r pressure, echo=FALSE}
+```{r message=FALSE, echo=FALSE}
 library(tidyverse)
 library(ggiteam)
 
