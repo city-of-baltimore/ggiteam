@@ -1,5 +1,5 @@
 #' Baltimore i-team colors
-
+#' @export
 iteam.colors <- c(
   "#EAAB00", # yellow
   "#666666", # med gray
@@ -18,13 +18,13 @@ iteam.colors <- c(
 #'   ggplot(aes(wt, mpg, color = factor(cyl))) +
 #'   geom_point() +
 #'   scale_color_discrete_iteam()
-
+#' @export
 scale_color_discrete_iteam <- function(){
   structure(list(
     scale_color_manual(values = iteam.colors)
   )
   )
-  
+
 }
 
 #' Baltimore i-team's ggplot2 colors for discrete aesthetics
@@ -36,14 +36,13 @@ scale_color_discrete_iteam <- function(){
 #'   ggplot(aes(x = am, y = ..count.., fill = factor(cyl))) +
 #'   geom_bar() +
 #'   scale_fill_discrete_iteam()
-
-
+#' @export
 scale_fill_discrete_iteam <- function(){
   structure(list(
     scale_fill_manual(values = iteam.colors)
   )
   )
-  
+
 }
 
 #' Baltimore i-team's ggplot2 colors for continuous color aesthetics
@@ -55,7 +54,7 @@ scale_fill_discrete_iteam <- function(){
 #'   ggplot(aes(wt, hp, color = disp)) +
 #'   geom_point() +
 #'   scale_color_continuous_iteam()
-
+#' @export
 scale_color_continuous_iteam <- function(){
   structure(list(
     scale_color_continuous(low = iteam.colors[6], high  = iteam.colors[3])
@@ -72,7 +71,7 @@ scale_color_continuous_iteam <- function(){
 #'  ggplot(aes(x = wt, y = mpg, color = disp)) +
 #'  geom_point(size = 5) +
 #'  theme_iteam_google_docs()
-
+#' @export
 theme_iteam_google_docs <- function (){
   theme(
     text = element_text(size = 10, color = "black"),
@@ -85,7 +84,6 @@ theme_iteam_google_docs <- function (){
     panel.grid.major.x = element_blank(),
     panel.grid.minor.y = element_blank(),
     strip.background = element_rect(fill = NA, colour = NA, size = 0.2),
-    legend.title = element_blank(),
     legend.background = element_rect(color="white"),
     legend.box.background = element_rect(color="white"),
     legend.key = element_rect(fill = "white"),
@@ -107,7 +105,7 @@ theme_iteam_google_docs <- function (){
 #'  ggplot(aes(x = wt, y = mpg, color = disp)) +
 #'  geom_point(size = 5) +
 #'  theme_iteam_presentations()
-
+#' @export
 theme_iteam_presentations <- function (){
   theme(
     text = element_text(size = 16, color = "black"),
@@ -120,7 +118,6 @@ theme_iteam_presentations <- function (){
     panel.grid.major.x = element_blank(),
     panel.grid.minor.y = element_blank(),
     strip.background = element_rect(fill = NA, colour = NA, size = 0.2),
-    legend.title = element_blank(),
     legend.background = element_rect(color="white"),
     legend.box.background = element_rect(color="white"),
     legend.key = element_rect(fill = "white"),
