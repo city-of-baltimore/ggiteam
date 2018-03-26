@@ -128,3 +128,67 @@ theme_iteam_presentations <- function (){
     axis.text.x = element_text(margin = ggplot2::margin(0, unit = "pt"))
   )
 }
+
+#' Plot save function
+#'
+#' This function will display and save a ggplot figure.
+#' @param fig ggplot object
+#' @param plot.dir string, name of directory for output file
+#' @param plot.name string, desired name for plot file
+#' @param height numeric, height of plot in inches
+#' @param width numeric, width of plot in in inches
+#' @param save.fig logical, whether plot figure will be saved or not
+#' @param save.format string, "svg", "png", "emf"
+#' @examples
+#' ggsave_for_docs(fig = my_plot,
+#'  plot.dir = "plot_directory/",
+#'  plot.name = "my_plot",
+#'  height = 4,
+#'  width = 6,
+#'  save.fig = T,
+#'  save.format = "png")
+#' @export
+ggsave_for_docs <- function(fig,
+                            plot.dir,
+                            plot.name,
+                            height,
+                            width,
+                            save.fig,
+                            save.format){
+
+  filename.format <- paste0(plot.dir, plot.name, ".", save.format)
+
+  if (save.fig == T & save.format == "png"){
+    ggsave(
+      filename.format,
+      fig,
+      height = height,
+      width = width,
+      type = "cairo-png",
+      dpi = 600
+    )
+  }
+
+  if (save.fig == T & save.format == "svg"){
+    ggsave(
+      filename.format,
+      fig,
+      height = height,
+      width = width,
+      device = "svg"
+    )
+  }
+
+  if (save.fig == T & save.format == "wmf"){
+    ggsave(
+      filename.format,
+      fig,
+      height = height,
+      width = width,
+      device = "wmf"
+    )
+  }
+
+
+  fig
+}
