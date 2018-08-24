@@ -1,12 +1,8 @@
 #' @import showtext
-
-# @export
-#.onLoad <- function(libname, pkgname){
-#  x <- rnorm(10)   ## dummy example
-#}
+NULL
 
 
-#' Baltimore i-team's ggplot2 colors for discrete aesthetics
+#' Baltimore i-team ggplot2 colors
 #' @export
 iteam.colors <- c(
   "#EAAB00", # yellow
@@ -16,7 +12,6 @@ iteam.colors <- c(
   "#0A83A1", # dark blue
   "#f4d57f"  # pale yellow
 )
-
 
 #showtext::font.add.google("Oswald", "oswald")
 #showtext::showtext_auto()
