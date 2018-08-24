@@ -6,6 +6,8 @@
 #}
 
 
+#' Baltimore i-team's ggplot2 colors for discrete aesthetics
+#' @export
 iteam.colors <- c(
   "#EAAB00", # yellow
   "#666666", # med gray
