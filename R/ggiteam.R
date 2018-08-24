@@ -1,13 +1,23 @@
-#' Baltimore i-team colors
-#' @export
+#' @import showtext
+
+# @export
+#.onLoad <- function(libname, pkgname){
+#  x <- rnorm(10)   ## dummy example
+#}
+
+
 iteam.colors <- c(
   "#EAAB00", # yellow
   "#666666", # med gray
-  "#981E32", # maroon
   "#5EB5CB", # blue
+  "#981E32", # maroon
   "#0A83A1", # dark blue
   "#f4d57f"  # pale yellow
 )
+
+
+#showtext::font.add.google("Oswald", "oswald")
+#showtext::showtext_auto()
 
 #' Baltimore i-team's ggplot2 colors for discrete aesthetics
 #'
@@ -74,9 +84,11 @@ scale_color_continuous_iteam <- function(){
 #' @export
 theme_iteam_google_docs <- function (){
   theme(
-    text = element_text(size = 10, color = "black"),
-    title = element_text(size = 10, color = "black"),
+    text = element_text(size = 10, color = "black", family = "oswald"),
+    title = element_text(size = 10, color = "black", face = "bold"),
+    axis.title = element_text(face = "bold"),
     plot.title = element_text(color = "black"),
+    plot.caption = element_text(size = 10),
     axis.ticks = element_line(color = NA),
     panel.background = element_rect(fill = "white", colour = NA),
     panel.border = element_rect(fill = NA, colour = NA),
@@ -108,9 +120,11 @@ theme_iteam_google_docs <- function (){
 #' @export
 theme_iteam_presentations <- function (){
   theme(
-    text = element_text(size = 16, color = "black"),
-    title = element_text(size = 16, color = "black"),
+    text = element_text(size = 16, color = "black", family = "oswald"),
+    title = element_text(size = 16, color = "black", face = "bold"),
+    axis.title = element_text(face = "bold"),
     plot.title = element_text(color = "black"),
+    plot.caption = element_text(size = 10),
     axis.ticks = element_line(color = NA),
     panel.background = element_rect(fill = "white", colour = NA),
     panel.border = element_rect(fill = NA, colour = NA),
