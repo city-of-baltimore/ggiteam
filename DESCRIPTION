@@ -3,7 +3,7 @@ Title: Baltimore Mayor's Office of Innovation Colors and Themes for ggplot2
 Version: 0.1
 Authors@R: person("Justin", "Elszasz", email = "justin.elszasz@baltimorecity.gov", role = c("aut", "cre"))
 Description: Add Baltimore innovation team's colors and themes to your ggplot2 plots!
-Depends: R (>= 3.4.3)
+Depends: R (>= 3.4.3), dplyr, showtext
 License: Creative Commons CC0 1.0 Universal (CC-0)
 Encoding: UTF-8
 LazyData: true

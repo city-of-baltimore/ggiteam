@@ -1,5 +1,12 @@
 #' @import showtext
+#' @import sysfonts
 NULL
+
+
+.onLoad <- function(libname, pkgname){
+  sysfonts::font_add_google("Oswald", "oswald")
+  showtext::showtext_auto()
+}
 
 
 #' Baltimore i-team ggplot2 colors
