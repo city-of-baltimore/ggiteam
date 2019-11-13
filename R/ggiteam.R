@@ -4,7 +4,7 @@ NULL
 
 
 .onLoad <- function(libname, pkgname){
-  sysfonts::font_add_google("Oswald", "oswald")
+  sysfonts::font_add_google("Roboto", "roboto")
   showtext::showtext_auto()
 }
 
@@ -12,11 +12,11 @@ NULL
 #' Baltimore i-team ggplot2 colors
 #' @export
 iteam.colors <- c(
-  "#EAAB00", # yellow
-  "#666666", # med gray
-  "#5EB5CB", # blue
+  "#fdb924", # yellow
+  "#4d4d4d", # med gray
+  "#66b8c9", # blue
   "#981E32", # maroon
-  "#0A83A1", # dark blue
+  "#00838c", # dark blue
   "#f4d57f"  # pale yellow
 )
 
@@ -88,11 +88,13 @@ scale_color_continuous_iteam <- function(){
 #' @export
 theme_iteam_google_docs <- function (){
   theme(
-    text = element_text(size = 10, color = "black", family = "oswald"),
+    text = element_text(size = 10, color = "black", family = "roboto"),
     title = element_text(size = 10, color = "black", face = "bold"),
     axis.title = element_text(face = "bold"),
     plot.title = element_text(color = "black"),
-    plot.caption = element_text(size = 10),
+    plot.caption = element_text(size = 10,
+                                face = "plain",
+                                hjust = 1),
     axis.ticks = element_line(color = NA),
     panel.background = element_rect(fill = "white", colour = NA),
     panel.border = element_rect(fill = NA, colour = NA),
@@ -124,11 +126,13 @@ theme_iteam_google_docs <- function (){
 #' @export
 theme_iteam_presentations <- function (){
   theme(
-    text = element_text(size = 16, color = "black", family = "oswald"),
+    text = element_text(size = 16, color = "black", family = "roboto"),
     title = element_text(size = 16, color = "black", face = "bold"),
     axis.title = element_text(face = "bold"),
     plot.title = element_text(color = "black"),
-    plot.caption = element_text(size = 10),
+    plot.caption = element_text(size = 10,
+                                face = "plain",
+                                hjust = 1),
     axis.ticks = element_line(color = NA),
     panel.background = element_rect(fill = "white", colour = NA),
     panel.border = element_rect(fill = NA, colour = NA),

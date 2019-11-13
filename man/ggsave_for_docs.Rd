@@ -4,7 +4,8 @@
 \alias{ggsave_for_docs}
 \title{Plot save function}
 \usage{
-ggsave_for_docs(fig, plot.dir, plot.name, height, width, save.fig, save.format)
+ggsave_for_docs(fig, plot.dir, plot.name, height, width, save.fig,
+  save.format)
 }
 \arguments{
 \item{fig}{ggplot object}
