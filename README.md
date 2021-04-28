@@ -13,10 +13,11 @@ Installation
 ------------
 
 ``` r
-# You'll first need to install devtools if you don't already have it
-# so that you can install a package from Github rather than CRAN.
+# You'll first need to install devtools and dplyr before installing ggiteam from Github
 # install.packages("devtools")
+# install.packages("dplyr")
 # library(devtools)
+# library(dplyr)
 # install_github("city-of-baltimore/ggiteam")
 ```
 
